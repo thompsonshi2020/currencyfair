@@ -1,0 +1,107 @@
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+.arc path {
+	stroke: #fff;
+}
+.arc:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+.datamap {
+	overflow: hidden;
+	stroke: #FFFFFF;
+	stroke-width: 1px;
+}
+.datamaps-subunit {
+	fill: rgb(171, 221, 164);
+	stroke-width: 1px;
+	stroke: rgb(253, 253, 253);
+}
+.datamaps-subunit:hover {
+	fill: #FF720A;
+	cursor: pointer;
+}
+.datamaps-bubble {
+	stroke: rgb(255, 255, 255);
+	stroke-width: 2px;
+	fill-opacity: 0.75;
+	fill: rgba(255, 215, 0, 0.952941);
+}
+.datamaps-bubble:hover {
+	fill: #FF720A;
+	cursor: pointer;
+}
+.popover-title {
+	background-color: #BCC3CA;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Trebuchet MS", Verdana, serif;
+}
+.popover-content {
+	background-color: #EDEFF1;
+}
+.popover-content span {
+	font-weight: bold;
+}
+.popover-content div {
+	padding-bottom: 5px;
+}
+
+h4 {
+	color: yellow;
+}
+
+hr {
+	border-bottom: 1px solid #BCC3CA;
+}
+.error {
+	font-weight: bold;
+	color: red;
+	font-size: 17px;
+	text-indent: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+table {
+	width: 1000px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+th {
+	text-align: left;
+}
+
+thead th {
+	background-color: #55608f;
+}
+tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+	position: relative;
+}
+tbody td:hover:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -9999px;
+	bottom: -9999px;
+	background-color: rgba(255, 255, 255, 0.2);
+	z-index: -1;
+}
+

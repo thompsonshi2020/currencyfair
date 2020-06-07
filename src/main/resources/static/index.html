@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>Home</title>
+	<script src="../js/sockjs.min.js" type="application/javascript"></script>
+	<script src="../js/stomp.min.js" type="application/javascript"></script>
+	<script src="../js/jquery.min.js" type="application/javascript"></script>
+	<script src="../js/bootstrap.min.js" type="application/javascript"></script>
+	<script src="../js/d3.min.js" type="application/javascript"></script>
+	<script src="../js/topojson.js" type="application/javascript"></script>
+	<script src="../js/custom.js" type="application/javascript"></script>
+	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../css/custom.css"/>
+</head>
+<body>
+	<div class="container">
+		<div class="row" style="margin-top: 40px;">
+			<h4>Summary of Top 5 Country Trades</h4>
+			<p id="topCountryTrade"></p>
+		</div>
+
+		<div class="row">
+			<h4>Summary of Top 10 Country Trades with Trading Pair</h4>
+			<p id="topCountryTradeCcy"></p>
+		</div>
+
+		<div class="row">
+			<h4>Summary of Latest 10 Trades</h4>
+			<p id="latestTrade"></p>
+		</div>
+	</div>
+
+	<script type="application/javascript">
+		$(function() {
+			console.log("access index");
+			app.connect();
+
+		});
+	</script>
+</body>
+</html>
