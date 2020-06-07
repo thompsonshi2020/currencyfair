@@ -40,13 +40,16 @@ Realize the market trade processor which consumes trade messages via an endpoint
 ## How to Get Start
 
 #### Frontend Endpoint
-
-  <http://15.165.158.139:8080/index.html>
+```
+<http://15.165.158.139:8080/index.html>
+```
 
 
 #### POST Endpoint
 
-  http&#58;//15.165.158.139:8080/fair/trade 
+```
+http&#58;//15.165.158.139:8080/fair/trade 
+```
 
     E.g. by curl:
 
@@ -54,9 +57,9 @@ Realize the market trade processor which consumes trade messages via an endpoint
 
 
 #### API Doc
-
-  <http://15.165.158.139:8080/swagger-ui.html#/>
-
+```
+<http://15.165.158.139:8080/swagger-ui.html#/>
+```
 
 #### Assumptions
 
@@ -77,13 +80,17 @@ The below "currencyTo" or "currencyFrom" are supported:
 
 ## Local Env Build and Run
 
-### Get the mongoDB from Docker:
+### Get the MongoDB from Docker:
 
-``` docker pull mongo ```
+``` 
+docker pull mongo
+```
 
-### Get the mongoDB from Docker:
+### Get the RabbitMQ from Docker:
 
-``` docker pull rabbitmq:3-management ```
+```
+docker pull rabbitmq:3-management
+```
 
 ### Get the application source from github:
 
