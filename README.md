@@ -15,7 +15,7 @@ Realize the market trade processor which consumes trade messages via an endpoint
 
   **iii) Message Frontend**
 
-  -The mentioned 3 types of dimensions are shown on frontend as below:
+  - The mentioned 3 types of dimensions are shown on frontend as below:
 
     - Summary of Top 5 Country Trades
     - Summary of Top 10 Country Trades with Trading Pairs
@@ -57,6 +57,7 @@ Realize the market trade processor which consumes trade messages via an endpoint
 
   <http://15.165.158.139:8080/swagger-ui.html#/>
 
+
 #### Assumptions
 
 The below "originatingCountry" are supported:
@@ -73,3 +74,25 @@ The below "currencyTo" or "currencyFrm" are supported:
   "CNY", "CHF", "SGD", "MYR", "DKK", "SAR", "RUB", "QAR", "TRY", "VEF"};
   ```
 
+
+## Local Env Build and Run
+
+### Get the source from github:
+
+```
+git clone https://github.com/thompsonshi2020/currencyfair.git
+```
+
+Use the dev tool (e.g. VS Code) or command line to open the Maven project
+
+- Install and Build:
+```
+mvn clean install
+mvn clean package
+```
+
+- Run it:
+
+```
+./mvnw spring-boot:run
+```
