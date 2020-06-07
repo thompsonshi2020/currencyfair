@@ -68,7 +68,7 @@ The below "originatingCountry" are supported:
   "CY", "AD", "BN", "EE", "SK", "MT", "QA", "HU", "PL", "LT",
   "PT", "BH", "LV", "CL", "AR", "HR", "BB", "UY", "PW", "RO"
   ```
-The below "currencyTo" or "currencyFrm" are supported:
+The below "currencyTo" or "currencyFrom" are supported:
   ```
   "AED", "AUD", "CAD", "EUR", "EGP", "GBP", "IDR", "INR", "USD", "JPY",
   "CNY", "CHF", "SGD", "MYR", "DKK", "SAR", "RUB", "QAR", "TRY", "VEF"};
@@ -77,7 +77,15 @@ The below "currencyTo" or "currencyFrm" are supported:
 
 ## Local Env Build and Run
 
-### Get the source from github:
+### Get the mongoDB from Docker:
+
+``` docker pull mongo ```
+
+### Get the mongoDB from Docker:
+
+``` docker pull rabbitmq:3-management ```
+
+### Get the application source from github:
 
 ```
 git clone https://github.com/thompsonshi2020/currencyfair.git

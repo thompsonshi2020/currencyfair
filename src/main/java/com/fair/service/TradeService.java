@@ -54,7 +54,7 @@ public class TradeService {
 
     /**
      *  Specify the logic here to validate the transaction, such as:
-     *  i) the rate of currencyFrm and currencyTo is valid in certain time period
+     *  i) the rate of currencyFrom and currencyTo is valid in certain time period
      *  ii) the amountSell and amount Buy are vaild
      */   
     private void validateTrade(TradeRec tradeRec) {
