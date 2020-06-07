@@ -1,26 +1,27 @@
 ## Quick Summary
 Realize the market trade processor which consumes trade messages via an endpoint, processes those messages in some way and delivers a frontend of processed information based on the consumed messages, includes:
   
-  i) Message Consumption
+  **i) Message Consumption**
 
-  The controller in Spring Boot as Singleton pattern to provide the endpoint for clients.
+  The controller in Spring Boot as Singleton pattern to provide the endpoint for the API clients.
    
   The messages are consumed in RabbitMQ, in fact, the Strategy pattern is used, different brands of MQ services can be pluggable, e.g. ActiveMQ, Hazelcast, Kafka, RabbitMQ, ZeroMQ, etc.
 
-  ii) Message Processor
+  **ii) Message Processor**
 
   The messages are validated by specific logic and stored in MongoDB.
    
   3 types of dimensions of trade results are implemented. For presenting the different dimensions of trade results to UI, mobile app, the Strategy pattern is used. So, any additional dimension of trade result can be implemented later on.
 
-  iii) Message Frontend
+  **iii) Message Frontend**
 
-  The mentioned 3 types of dimensions are shown on frontend as below
-    Summary of Top 5 Country Trades
-    Summary of Top 10 Country Trades with Trading Pairs
-    Summary of Latest 10 Trades
+  The mentioned 3 types of dimensions are shown on frontend as below:
 
-  Web Socket is implemented. So, any messages sent by any users will be aggregated and pushed to the frontend
+    - Summary of Top 5 Country Trades
+    - Summary of Top 10 Country Trades with Trading Pairs
+    - Summary of Latest 10 Trades
+
+  Web Socket is implemented. So, any messages sent by any users will be aggregated and pushed to the frontend.
 
 
 ## Technology Used
@@ -40,12 +41,12 @@ Realize the market trade processor which consumes trade messages via an endpoint
 
 #### Frontend Endpoint
 
-  [http://15.165.158.139:8080/index.html]
+  <http://15.165.158.139:8080/index.html>
 
 
 #### POST Endpoint
 
-  [http://15.165.158.139:8080/fair/trade]
+  http://15.165.158.139:8080/fair/trade
 
     E.g. by curl:
 
@@ -54,7 +55,7 @@ Realize the market trade processor which consumes trade messages via an endpoint
 
 #### API Doc
 
-  [http://15.165.158.139:8080/swagger-ui.html#/]
+  <http://15.165.158.139:8080/swagger-ui.html#/>
 
 #### Assumptions
 
