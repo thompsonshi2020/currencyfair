@@ -46,7 +46,7 @@ Realize the market trade processor which consumes trade messages via an endpoint
 
 #### POST Endpoint
 
-  http://15.165.158.139:8080/fair/trade
+  http&#58;//15.165.158.139:8080/fair/trade 
 
     E.g. by curl:
 
