@@ -3,25 +3,25 @@ Realize the market trade processor which consumes trade messages via an endpoint
   
   **i) Message Consumption**
 
-  The controller in Spring Boot as Singleton pattern to provide the endpoint for the API clients.
+  - The controller in Spring Boot as Singleton pattern to provide the endpoint for the API clients.
    
-  The messages are consumed in RabbitMQ, in fact, the Strategy pattern is used, different brands of MQ services can be pluggable, e.g. ActiveMQ, Hazelcast, Kafka, RabbitMQ, ZeroMQ, etc.
+  - The messages are consumed in RabbitMQ, in fact, the Strategy pattern is used, different brands of MQ services can be pluggable, e.g. ActiveMQ, Hazelcast, Kafka, RabbitMQ, ZeroMQ, etc.
 
   **ii) Message Processor**
 
-  The messages are validated by specific logic and stored in MongoDB.
+  - The messages are validated by specific logic and stored in MongoDB.
    
-  3 types of dimensions of trade results are implemented. For presenting the different dimensions of trade results to UI, mobile app, the Strategy pattern is used. So, any additional dimension of trade result can be implemented later on.
+  - 3 types of dimensions of trade results are implemented. For presenting the different dimensions of trade results to UI, mobile app, the Strategy pattern is used. So, any additional dimension of trade result can be implemented later on.
 
   **iii) Message Frontend**
 
-  The mentioned 3 types of dimensions are shown on frontend as below:
+  -The mentioned 3 types of dimensions are shown on frontend as below:
 
     - Summary of Top 5 Country Trades
     - Summary of Top 10 Country Trades with Trading Pairs
     - Summary of Latest 10 Trades
 
-  Web Socket is implemented. So, any messages sent by any users will be aggregated and pushed to the frontend.
+  - Web Socket is implemented. So, any messages sent by any users will be aggregated and pushed to the frontend.
 
 
 ## Technology Used
