@@ -2,7 +2,8 @@
 
 **Post Applied:** Head of Engineering Asia / Technical Lead - IT Engineering
 
-#### Contact
+* Contact *
+
 **Name:** Thompson Shi
 
 **Email:** thompsonshi@gmail.com
