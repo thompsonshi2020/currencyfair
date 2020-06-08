@@ -1,9 +1,14 @@
 ## Candidate
-Post Applied: Head of Engineering Asia
+Post Applied: Head of Engineering Asia / Technical Lead - IT Engineering
 
 #### Contact
-Email: thompsonshi@gmail.com
-Mobile No.: 852 9720 9034
+**Name:** Thompson Shi
+
+**Email:** thompsonshi@gmail.com
+
+**Mobile No.:** 852 9720 9034
+
+------------------------------------------------------------------------
 
 
 ## Quick Summary
