@@ -1,3 +1,11 @@
+## Candidate
+Post Applied: Head of Engineering Asia
+
+#### Contact
+Email: thompsonshi@gmail.com
+Mobile No.: 852 9720 9034
+
+
 ## Quick Summary
 Realize the market trade processor which consumes trade messages via an endpoint, processes those messages in some way and delivers a frontend of processed information based on the consumed messages, includes:
   
@@ -40,15 +48,15 @@ Realize the market trade processor which consumes trade messages via an endpoint
 ## How to Get Start
 
 #### Frontend Endpoint
-```
+
 <http://15.165.158.139:8080/index.html>
-```
+
 
 
 #### POST Endpoint
 
 ```
-http&#58;//15.165.158.139:8080/fair/trade 
+http://15.165.158.139:8080/fair/trade 
 ```
 
     E.g. by curl:
@@ -57,9 +65,9 @@ http&#58;//15.165.158.139:8080/fair/trade
 
 
 #### API Doc
-```
+
 <http://15.165.158.139:8080/swagger-ui.html#/>
-```
+
 
 #### Assumptions
 
