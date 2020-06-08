@@ -1,5 +1,6 @@
 ## Candidate
-Post Applied: Head of Engineering Asia / Technical Lead - IT Engineering
+
+**Post Applied:** Head of Engineering Asia / Technical Lead - IT Engineering
 
 #### Contact
 **Name:** Thompson Shi
@@ -20,11 +21,17 @@ Realize the market trade processor which consumes trade messages via an endpoint
    
   - The messages are consumed in RabbitMQ, in fact, the Strategy pattern is used, different brands of MQ services can be pluggable, e.g. ActiveMQ, Hazelcast, Kafka, RabbitMQ, ZeroMQ, etc.
 
+  - Also, the Factory pattern is used about the determining what MQ services is created in run-time.
+
+  - As extensibility and scalability, the exchange component as gateway in ActiveMQ is ready to extend. For all the Post endpoint clients from different countries who send messages to the application, the exchange is responsible for sending the messages to the dedicated queue of each originating county.
+
   **ii) Message Processor**
 
   - The messages are validated by specific logic and stored in MongoDB.
    
-  - 3 types of dimensions of trade results are implemented. For presenting the different dimensions of trade results to UI, mobile app, the Strategy pattern is used. So, any additional dimension of trade result can be implemented later on.
+  - 3 types of dimensions of trade results as a service is implemented. For presenting the different dimensions of trade results to UI, mobile app, the Strategy pattern is used. So, any additional dimension of trade result as a service can be implemented later on.
+
+  - Also, the Factory pattern is used about the determining what dimensions of trade result service is created in run-time.
 
   **iii) Message Frontend**
 
@@ -34,7 +41,7 @@ Realize the market trade processor which consumes trade messages via an endpoint
     - Summary of Top 10 Country Trades with Trading Pairs
     - Summary of Latest 10 Trades
 
-  - Web Socket is implemented. So, any messages sent by any users will be aggregated and pushed to the frontend.
+  - Web Socket is implemented as Publisher-Subscriber pattern. the web socket clients as subscriber to be notified by the new messages, that is, any messages sent by any other users are aggregated and processed in the application, as publisher then pushs to the subscriber on frontend.
 
 
 ## Technology Used
@@ -75,8 +82,9 @@ http://15.165.158.139:8080/fair/trade
 
 
 #### Assumptions
+Different validation rules of all the pararmeters should be implemented. The POST endpoint now is just validated all parameters are mandatory.
 
-The below "originatingCountry" are supported:
+The below "originatingCountry" are assumed to support:
   ```
   "NO", "AU", "NL", "US", "NZ", "CA", "IE", "LI", "DE", "SE",
   "CH", "JP", "HK", "IS", "KR", "DK", "IL", "BE", "AT", "FR",
@@ -84,10 +92,10 @@ The below "originatingCountry" are supported:
   "CY", "AD", "BN", "EE", "SK", "MT", "QA", "HU", "PL", "LT",
   "PT", "BH", "LV", "CL", "AR", "HR", "BB", "UY", "PW", "RO"
   ```
-The below "currencyTo" or "currencyFrom" are supported:
+The below "currencyTo" or "currencyFrom" are assumed to support:
   ```
   "AED", "AUD", "CAD", "EUR", "EGP", "GBP", "IDR", "INR", "USD", "JPY",
-  "CNY", "CHF", "SGD", "MYR", "DKK", "SAR", "RUB", "QAR", "TRY", "VEF"};
+  "CNY", "CHF", "SGD", "MYR", "DKK", "SAR", "RUB", "QAR", "TRY", "VEF"
   ```
 
 

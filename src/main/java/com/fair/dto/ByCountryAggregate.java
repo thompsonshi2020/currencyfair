@@ -4,7 +4,7 @@ package com.fair.dto;
  * DTO to hold country aggregate information for front end
  */
 
-//@JsonIgnoreProperties({"pairs"})
+
 public class ByCountryAggregate {
 
 	private int tradeCount;
