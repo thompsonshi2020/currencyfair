@@ -41,7 +41,7 @@ Realize the market trade processor which consumes trade messages via an endpoint
     - Summary of Top 10 Country Trades with Trading Pairs
     - Summary of Latest 10 Trades
 
-  - Web Socket is implemented as Publisher-Subscriber pattern. the web socket clients as subscriber to be notified by the new messages, that is, any messages sent by any other users are aggregated and processed in the application, as publisher then pushs to the subscriber on frontend.
+  - Web Socket is implemented as Publisher-Subscriber pattern. the web socket clients as subscriber to be notified by the new messages, that is, any messages sent by any other users are aggregated and processed in the application, as publisher then pushes to the subscribers on frontend.
 
 
 ## Technology Used
@@ -82,7 +82,7 @@ http://15.165.158.139:8080/fair/trade
 
 
 #### Assumptions
-Different validation rules of all the pararmeters should be implemented. The POST endpoint now is just validated all parameters are mandatory.
+Different validation rules of all the parameters should be implemented. The POST endpoint now is just validated all parameters are mandatory.
 
 The below "originatingCountry" are assumed to support:
   ```
