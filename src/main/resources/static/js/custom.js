@@ -22,7 +22,12 @@ app = {
     
                     if (data.length != 0) {
                         $('.error').remove();
-                        app.drawPieChart(data);
+                        
+                        // Draw Pie Chart of Top 5 Country Trade
+                        const clone = data.slice(0,5);
+                        app.drawPieChart(clone);
+                        
+                        // Draw Table of Top Country Trade
                         app.drawTableTopCountryTrade(data);
 
                     } else {
@@ -150,6 +155,7 @@ app = {
         var pie = d3.layout.pie()
             .sort(null)
             .value(function(d) { return d.tradeCount; });
+
         var pieData = pie(data);
 
         var svg = d3.select('#topCountryTrade').selectAll('svg').data([data]);
